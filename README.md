@@ -1,4 +1,95 @@
-# 🏗 Scaffold-ETH 2
+# Swaptel 
+Swaptel
+
+Our new product demo, swaptel, is a game-changer for anyone who needs to transfer money quickly and easily. With Swaptel, you can make transfers on the go, and receive instant notifications. Swaptel is designed to meet the needs of everyday people, with a user-friendly interface that makes it easy to use.
+
+What Problem are we working to solve ?
+ 
+In Africa, there are more people offline than those connected to the internet. As a result, financial services within the continent cost more to end users. Local and Cross-border transfers are either limited, expensive, slow or all three. Despite advertised cost savings and speed advantages, decentralized applications have barely made an impact on the daily activity of people, or disrupted legacy products at the entry-level of service delivery. Product offerings so far have resembled a dystopian informational campaign presenting technical specifications to the wrong audience; cryptography, self-custody, alphanumeric wallet data, and tutorial videos and reels for using crypto wallets.
+
+##What solution have we developed to address said problem ?
+
+Swaptel is a web3 Dapp that simplifies financial transactions within African communities. It builds on familiar user behavior of token transfers to anyone using a phone number. It resolves the challenge of complexity in user experience associated with cryptocurrencies, particularly for users unfamiliar with the technology, having no prior knowledge of wallets, digital currencies or self custody paraphernalia.
+With Swaptel, users effortlessly send, track, and receive money using  phone numbers as unique IDs.  
+
+
+
+##How does the application of blockchain technology help solve the problem ?
+
+Blockchain technology enables the cost-effective transfer of digital assets between wallets. Transaction immutability serves as a fraud-proof record of transactions that can be leveraged for secondary uses, such as insurance costing, credit profiling, etc. 
+Unlike alternative payment methods, Swaptel is fast, efficient, cost-effective and reliable. You can trust that your money will be transferred securely and quickly.
+With Swaptel, you can enjoy the convenience of completing rapid and cost-effective  digital payments without the need for tutorials to complete a task. We’ve got easy one-click transfers, push notifications, all using your familiar phone numbers as ID. Enjoy ease with swaptel.
+
+#Key Features:
+- 1. Cost-effective transfers : enter a phone number as ID and confirm the amount to initiate a transfer.
+
+- 2. Security : Funds are secured, and provide immutable record-keeping of all transactions. Wallet owners are the only authorized signers of transactions, authenticated at login.
+
+
+
+#How It Works
+
+- 1. Users log in to the Swaptel platform using their phone numbers.
+
+- 2. A wallet is automatically created for each user profile.
+
+- 3. Users input the recipient's phone number and specify the payment amount.
+
+4. Users initiate the money transfer by sending it to the recipient's phone number.
+ 
+5. Users share the Swap link with recipients through SMS or messaging apps.
+  
+ 
+#Why it Matters:
+ 
+Swaptel simplifies the process of requesting and receiving payments, making it accessible to all users.
+  
+ Easy wallet creation eliminates barriers for newcomers to cryptocurrency. Whether users are new to cryptocurrency or don't possess a wallet, Swaptel offers an accessible solution. Swaptel provides a user-friendly experience, making it an ideal choice for onboarding new users to a suite of decentralized products.
+
+ 
+ When you have money in Swap, it is truly yours — just like digital cash. That means no limits, no "business hours," no delays.
+ 
+Swaptel aims to revolutionize financial transactions in Africa by offering an inclusive, cost-effective web3 solution that can onboard millions of everyday African users to web3/crypto, regardless of their technical knowledge.
+
+ 
+#How it’s Made:
+ 
+It Uses Safe{Core} AA SDK for creating the smart contract accounts on Base Görli testnet. For Login we are using a safe Auth Kit which is built on top of Web3 Auth.
+ 
+Every link is a smart contract account, This is possible by generating the new wallet account EOAs using trust wallet’s wallet core. Once the new account is created the private key is encoded with base58 format and sent in the URL. Hence URL will act as a private key for the EOA account.
+ 
+From the EOA account we are predicting the Safe Smart Contract Account address whenever the user tries to load the link. P.S., due to which the slow load time as well.
+Smart contract address will have the reward balance. And whenever the user tries to claim it we are using a Safe Relay Kit which is built on top of the Gelato.
+  
+ 
+#Tech Stack:
+ 
+Frontend: Next.js with app directory structure.
+ 
+Backend: Next.js API routes.
+ 
+Authentication: Nextauth for  wallet authentication.
+ 
+Wallet Creation: Web3auth for wallet creation.
+ 
+Styling: TailwindCSS and Shadchan UI for a clean and user-friendly interface.
+
+ 
+#Challenges: 
+ 
+How it can be improved:  text-based features for offline use cases to deepen the reach into remote users and target communities. 
+ 
+
+#Future Outcomes: 
+ 
+Our product feature roadmap is divided into online initiatives that build on the functionality of the product online, as well as offline initiatives that offer text-based functionality. Online initiatives include notification links for repeating frequent transfers, internal messaging and group creation for split expenses and targeted savings, and impact fundraising.
+ After the basic use case of transfers to gain traction, educational content can progressively introduce an advanced suite of features in a toggle switch to pro version that offers inter-currency swaps, bulk transaction scheduling for merchant services, as well as other products.
+
+https://www.canva.com/design/DAFt8Kt-r9I/AWY0jeG0G1L8qBOYG4Yg9g/edit?utm_content=DAFt8Kt-r9I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+ 
+
+
+# Built on 🏗 Scaffold-ETH 2
 
 🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -71,234 +162,6 @@ Run smart contract test with `yarn hardhat:test`
 - Edit your frontend in `packages/nextjs/pages`
 - Edit your deployment scripts in `packages/hardhat/deploy`
 
-## Deploying your Smart Contracts to a Live Network
-
-Once you are ready to deploy your smart contracts, there are a few things you need to adjust.
-
-1. Select the network
-
-By default, `yarn deploy` will deploy the contract to the local network. You can change the defaultNetwork in `packages/hardhat/hardhat.config.ts.` You could also simply run `yarn deploy --network target_network` to deploy to another network.
-
-Check the `hardhat.config.ts` for the networks that are pre-configured. You can also add other network settings to the `hardhat.config.ts file`. Here are the [Alchemy docs](https://docs.alchemy.com/docs/how-to-add-alchemy-rpc-endpoints-to-metamask) for information on specific networks.
-
-Example: To deploy the contract to the Sepolia network, run the command below:
-
-```
-yarn deploy --network sepolia
-```
-
-2. Generate a new account or add one to deploy the contract(s) from. Additionally you will need to add your Alchemy API key. Rename `.env.example` to `.env` and fill the required keys.
-
-```
-ALCHEMY_API_KEY="",
-DEPLOYER_PRIVATE_KEY=""
-```
-
-The deployer account is the account that will deploy your contracts. Additionally, the deployer account will be used to execute any function calls that are part of your deployment script.
-
-You can generate a random account / private key with `yarn generate` or add the private key of your crypto wallet. `yarn generate` will create a random account and add the DEPLOYER_PRIVATE_KEY to the .env file. You can check the generated account with `yarn account`.
-
-3. Deploy your smart contract(s)
-
-Run the command below to deploy the smart contract to the target network. Make sure to have some funds in your deployer account to pay for the transaction.
-
-```
-yarn deploy --network network_name
-```
-
-4. Verify your smart contract
-
-You can verify your smart contract on Etherscan by running:
-
-```
-yarn verify --network network_name
-```
-
-## Deploying your NextJS App
-
-**Hint**: We recommend connecting your GitHub repo to Vercel (through the Vercel UI) so it gets automatically deployed when pushing to `main`.
-
-If you want to deploy directly from the CLI, run `yarn vercel` and follow the steps to deploy to Vercel. Once you log in (email, github, etc), the default options should work. It'll give you a public URL.
-
-If you want to redeploy to the same production URL you can run `yarn vercel --prod`. If you omit the `--prod` flag it will deploy it to a preview/test URL.
-
-**Make sure your `packages/nextjs/scaffold.config.ts` file has the values you need.**
-
-## Interacting with your Smart Contracts: SE-2 Custom Hooks
-
-Scaffold-ETH 2 provides a collection of custom React hooks designed to simplify interactions with your deployed smart contracts. These hooks are wrappers around `wagmi`, automatically loading the necessary contract ABI and address. They offer an easy-to-use interface for reading from, writing to, and monitoring events emitted by your smart contracts.
-
-To help developers get started with smart contract interaction using Scaffold-ETH 2, we've provided the following custom hooks:
-
-- [useScaffoldContractRead](#usescaffoldcontractread): for reading public variables and getting data from read-only functions of your contract.
-- [useScaffoldContractWrite](#usescaffoldcontractwrite): for sending transactions to your contract to write data or perform an action.
-- [useScaffoldEventSubscriber](#usescaffoldeventsubscriber): for subscribing to your contract events and receiving real-time updates when events are emitted.
-- [useScaffoldEventHistory](#usescaffoldeventhistory): for retrieving historical event logs for your contract, providing past activity data.
-- [useDeployedContractInfo](#usedeployedcontractinfo): for fetching details from your contract, including the ABI and address.
-- [useScaffoldContract](#usescaffoldcontract): for obtaining a contract instance that lets you interact with the methods of your deployed smart contract.
-
-These hooks offer a simplified and streamlined interface for interacting with your smart contracts. If you need to interact with external contracts, you can use `wagmi` directly, or add external contract data to your `deployedContracts.ts` file.
-
-### useScaffoldContractRead:
-
-Use this hook to read public variables and get data from read-only functions of your smart contract.
-
-```ts
-const { data: totalCounter } = useScaffoldContractRead({
-  contractName: "YourContract",
-  functionName: "getGreeting",
-  args: ["ARGUMENTS IF THE FUNCTION ACCEPTS ANY"],
-});
-```
-
-This example retrieves the data returned by the `getGreeting` function of the `YourContract` smart contract. If the function accepts any arguments, they can be passed in the args array. The retrieved data is stored in the `data` property of the returned object.
-
-### useScaffoldContractWrite:
-
-Use this hook to send a transaction to your smart contract to write data or perform an action.
-
-```ts
-const { writeAsync, isLoading, isMining } = useScaffoldContractWrite({
-  contractName: "YourContract",
-  functionName: "setGreeting",
-  args: ["The value to set"],
-  // For payable functions, expressed in ETH
-  value: "0.01",
-  // The number of block confirmations to wait for before considering transaction to be confirmed (default : 1).
-  blockConfirmations: 1,
-  // The callback function to execute when the transaction is confirmed.
-  onBlockConfirmation: (txnReceipt) => {
-    console.log("Transaction blockHash", txnReceipt.blockHash);
-  },
-});
-```
-
-To send the transaction, you can call the `writeAsync` function returned by the hook. Here's an example usage:
-
-```ts
-<button className="btn btn-primary" onClick={writeAsync}>
-  Send TX
-</button>
-```
-
-This example sends a transaction to the `YourContract` smart contract to call the `setGreeting` function with the arguments passed in `args`. The `writeAsync` function sends the transaction to the smart contract, and the `isLoading` and `isMining` properties indicate whether the transaction is currently being processed by the network.
-
-### useScaffoldEventSubscriber:
-
-Use this hook to subscribe to events emitted by your smart contract, and receive real-time updates when these events are emitted.
-
-```ts
-useScaffoldEventSubscriber({
-  contractName: "YourContract",
-  eventName: "GreetingChange",
-  // The listener function is called whenever a GreetingChange event is emitted by the contract.
-  // It receives the parameters emitted by the event, for this example: GreetingChange(address greetingSetter, string newGreeting, bool premium, uint256 value);
-  listener: (greetingSetter, newGreeting, premium, value) => {
-    console.log(greetingSetter, newGreeting, premium, value);
-  },
-});
-```
-
-This example subscribes to the `GreetingChange` event emitted by the `YourContract` smart contract, and logs the parameters emitted by the event to the console whenever it is emitted. The `listener` function accepts the parameters emitted by the event, and can be customized according to your needs.
-
-### useScaffoldEventHistory:
-
-Use this hook to retrieve historical event logs for your smart contract, providing past activity data.
-
-```ts
-const {
-  data: events,
-  isLoading: isLoadingEvents,
-  error: errorReadingEvents,
-  } = useScaffoldEventHistory({
-  contractName: "YourContract",
-  eventName: "GreetingChange",
-  // Specify the starting block number from which to read events, this is a bigint.
-  fromBlock: 31231n,
-  blockData: true,
-  // Apply filters to the event based on parameter names and values { [parameterName]: value },
-  filters: { premium: true }
-  // If set to true it will return the transaction data for each event (default: false),
-  transactionData: true,
-  // If set to true it will return the receipt data for each event (default: false),
-  receiptData: true
-});
-```
-
-This example retrieves the historical event logs for the `GreetingChange` event of the `YourContract` smart contract, starting from block number 31231 and filtering events where the premium parameter is true. The data property of the returned object contains an array of event objects, each containing the event parameters and (optionally) the block, transaction, and receipt data. The `isLoading` property indicates whether the event logs are currently being fetched, and the `error` property contains any error that occurred during the fetching process (if applicable).
-
-### useDeployedContractInfo:
-
-Use this hook to fetch details about a deployed smart contract, including the ABI and address.
-
-```ts
-// ContractName: name of the deployed contract
-const { data: deployedContractData } = useDeployedContractInfo(contractName);
-```
-
-This example retrieves the details of the deployed contract with the specified name and stores the details in the deployedContractData object.
-
-### useScaffoldContract:
-
-Use this hook to get your contract instance by providing the contract name. It enables you interact with your contract methods.
-For reading data or sending transactions, it's recommended to use `useScaffoldContractRead` and `useScaffoldContractWrite`.
-
-```ts
-const { data: yourContract } = useScaffoldContract({
-  contractName: "YourContract",
-});
-// Returns the greeting and can be called in any function, unlike useScaffoldContractRead
-await yourContract?.greeting();
-
-// Used to write to a contract and can be called in any function
-import { useWalletClient } from "wagmi";
-
-const { data: walletClient } = useWalletClient();
-const { data: yourContract } = useScaffoldContract({
-  contractName: "YourContract",
-  walletClient,
-});
-const setGreeting = async () => {
-  // Call the method in any function
-  await yourContract?.setGreeting("the greeting here");
-};
-```
-
-This example uses the `useScaffoldContract` hook to obtain a contract instance for the `YourContract` smart contract. The data property of the returned object contains the contract instance that can be used to call any of the smart contract methods.
-
-## Disabling type and linting error checks
-
-> **Hint**
-> Typescript helps you catch errors at compile time, which can save time and improve code quality, but can be challenging for those who are new to the language or who are used to the more dynamic nature of JavaScript. Below are the steps to disable type & lint check at different levels
-
-### Disabling commit checks
-
-We run `pre-commit` [git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) which lints the staged files and don't let you commit if there is an linting error.
-
-To disable this, go to `.husky/pre-commit` file and comment out `yarn lint-staged --verbose`
-
-```diff
-- yarn lint-staged --verbose
-+ # yarn lint-staged --verbose
-```
-
-### Deploying to Vercel without any checks
-
-By default, Vercel runs types and lint checks before building your app. The deployment will fail if there are any types or lint errors.
-
-To ignore these checks while deploying from the CLI, use:
-
-```shell
-yarn vercel:yolo
-```
-
-If your repo is connected to Vercel, you can set `NEXT_PUBLIC_IGNORE_BUILD_ERROR` to `true` in a [environment variable](https://vercel.com/docs/concepts/projects/environment-variables).
-
-### Disabling Github Workflow
-
-We have github workflow setup checkout `.github/workflows/lint.yaml` which runs types and lint error checks every time code is **pushed** to `main` branch or **pull request** is made to `main` branch
-
-To disable it, **delete `.github` directory**
 
 ## Contributing to Scaffold-ETH 2
 
