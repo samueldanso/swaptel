@@ -7,27 +7,27 @@ What Problem are we working to solve ?
  
 In Africa, there are more people offline than those connected to the internet. As a result, financial services within the continent cost more to end users. Local and Cross-border transfers are either limited, expensive, slow or all three. Despite advertised cost savings and speed advantages, decentralized applications have barely made an impact on the daily activity of people, or disrupted legacy products at the entry-level of service delivery. Product offerings so far have resembled a dystopian informational campaign presenting technical specifications to the wrong audience; cryptography, self-custody, alphanumeric wallet data, and tutorial videos and reels for using crypto wallets.
 
-##What solution have we developed to address said problem ?
+# What solution have we developed to address said problem ?
 
 Swaptel is a web3 Dapp that simplifies financial transactions within African communities. It builds on familiar user behavior of token transfers to anyone using a phone number. It resolves the challenge of complexity in user experience associated with cryptocurrencies, particularly for users unfamiliar with the technology, having no prior knowledge of wallets, digital currencies or self custody paraphernalia.
 With Swaptel, users effortlessly send, track, and receive money using  phone numbers as unique IDs.  
 
 
 
-##How does the application of blockchain technology help solve the problem ?
+# How does the application of blockchain technology help solve the problem ?
 
 Blockchain technology enables the cost-effective transfer of digital assets between wallets. Transaction immutability serves as a fraud-proof record of transactions that can be leveraged for secondary uses, such as insurance costing, credit profiling, etc. 
 Unlike alternative payment methods, Swaptel is fast, efficient, cost-effective and reliable. You can trust that your money will be transferred securely and quickly.
 With Swaptel, you can enjoy the convenience of completing rapid and cost-effective  digital payments without the need for tutorials to complete a task. We’ve got easy one-click transfers, push notifications, all using your familiar phone numbers as ID. Enjoy ease with swaptel.
 
-#Key Features:
+# Key Features:
 - 1. Cost-effective transfers : enter a phone number as ID and confirm the amount to initiate a transfer.
 
 - 2. Security : Funds are secured, and provide immutable record-keeping of all transactions. Wallet owners are the only authorized signers of transactions, authenticated at login.
 
 
 
-#How It Works
+# How It Works
 
 - 1. Users log in to the Swaptel platform using their phone numbers.
 
@@ -40,7 +40,7 @@ With Swaptel, you can enjoy the convenience of completing rapid and cost-effecti
 5. Users share the Swap link with recipients through SMS or messaging apps.
   
  
-#Why it Matters:
+# Why it Matters:
  
 Swaptel simplifies the process of requesting and receiving payments, making it accessible to all users.
   
@@ -62,7 +62,7 @@ From the EOA account we are predicting the Safe Smart Contract Account address w
 Smart contract address will have the reward balance. And whenever the user tries to claim it we are using a Safe Relay Kit which is built on top of the Gelato.
   
  
-#Tech Stack:
+# Tech Stack:
  
 Frontend: Next.js with app directory structure.
  
@@ -70,21 +70,22 @@ Backend: Next.js API routes.
  
 Authentication: Nextauth for  wallet authentication.
  
-Wallet Creation: Web3auth for wallet creation.
  
 Styling: TailwindCSS and Shadchan UI for a clean and user-friendly interface.
 
  
-#Challenges: 
+# Challenges: 
  
 How it can be improved:  text-based features for offline use cases to deepen the reach into remote users and target communities. 
  
 
-#Future Outcomes: 
+# Future Outcomes: 
  
 Our product feature roadmap is divided into online initiatives that build on the functionality of the product online, as well as offline initiatives that offer text-based functionality. Online initiatives include notification links for repeating frequent transfers, internal messaging and group creation for split expenses and targeted savings, and impact fundraising.
  After the basic use case of transfers to gain traction, educational content can progressively introduce an advanced suite of features in a toggle switch to pro version that offers inter-currency swaps, bulk transaction scheduling for merchant services, as well as other products.
+ (In view: Wallet Creation: Web3auth for wallet creation.)
 
+# Presentation File
 https://www.canva.com/design/DAFt8Kt-r9I/AWY0jeG0G1L8qBOYG4Yg9g/edit?utm_content=DAFt8Kt-r9I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
  
 
