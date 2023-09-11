@@ -3,13 +3,15 @@ Swaptel
 
 Our new product demo, swaptel, is a game-changer for anyone who needs to transfer money quickly and easily. With Swaptel, you can make transfers on the go, and receive instant notifications. Swaptel is designed to meet the needs of everyday people, with a user-friendly interface that makes it easy to use.
 
-What Problem are we working to solve ?
+# What Problem are we working to solve ?
  
 In Africa, there are more people offline than those connected to the internet. As a result, financial services within the continent cost more to end users. Local and Cross-border transfers are either limited, expensive, slow or all three. Despite advertised cost savings and speed advantages, decentralized applications have barely made an impact on the daily activity of people, or disrupted legacy products at the entry-level of service delivery. Product offerings so far have resembled a dystopian informational campaign presenting technical specifications to the wrong audience; cryptography, self-custody, alphanumeric wallet data, and tutorial videos and reels for using crypto wallets.
 
-# What solution have we developed to address said problem ?
+# Solution
+ What solution have we developed to address said problem ?
 
-Swaptel is a web3 Dapp that simplifies financial transactions within African communities. It builds on familiar user behavior of token transfers to anyone using a phone number. It resolves the challenge of complexity in user experience associated with cryptocurrencies, particularly for users unfamiliar with the technology, having no prior knowledge of wallets, digital currencies or self custody paraphernalia.
+Swaptel is a Dapp that simplifies financial transactions within African communities. It builds on familiar user behavior of token transfers to anyone using a phone number. 
+It resolves the challenge of complexity in user experience associated with cryptocurrencies, particularly for users unfamiliar with the technology, having no prior knowledge of wallets, digital currencies or self custody paraphernalia.
 With Swaptel, users effortlessly send, track, and receive money using  phone numbers as unique IDs.  
 
 
@@ -81,8 +83,9 @@ How it can be improved:  text-based features for offline use cases to deepen the
 
 # Future Outcomes: 
  
-Our product feature roadmap is divided into online initiatives that build on the functionality of the product online, as well as offline initiatives that offer text-based functionality. Online initiatives include notification links for repeating frequent transfers, internal messaging and group creation for split expenses and targeted savings, and impact fundraising.
- After the basic use case of transfers to gain traction, educational content can progressively introduce an advanced suite of features in a toggle switch to pro version that offers inter-currency swaps, bulk transaction scheduling for merchant services, as well as other products.
+Our product feature roadmap is divided into online initiatives that build on the functionality of the product online, as well as offline initiatives that offer text-based functionality. 
+Online initiatives include notification links for repeating frequent transfers, internal messaging and group creation for split expenses and targeted savings, and impact fundraising.
+ After the basic use case of transfers to gain traction, educational content can progressively introduce an advanced suite of features in a toggle switch to pro version that offers inter-currency swaps, bulk transaction scheduling for merchant services, and more.
  (In view: Wallet Creation: Web3auth for wallet creation.)
 
 # Presentation File
@@ -100,7 +103,7 @@ https://www.canva.com/design/DAFt8Kt-r9I/AWY0jeG0G1L8qBOYG4Yg9g/edit?utm_content
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
-## Contents
+## Links
 
 - [Requirements](#requirements)
 - [Quickstart](#quickstart)
